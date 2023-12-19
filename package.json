@@ -1,17 +1,17 @@
 {
   "version": "4.0.0",
-  "name": "beeYOU-react",
+  "name": "beeyou-react",
   "description": "React version of beeYOU",
-  "author": "Luke McDonald (https://lukemcdonald.com/)",
-  "homepage": "https://lukemcdonald.github.io/beeYOU-react",
+  "author": "Luke McDonald (https://lordkaito.com/)",
+  "homepage": "https://github.com/Lordkaito/beeyoustream",
   "keywords": [],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lukemcdonald/beeYOU-react.git"
+    "url": "https://github.com/lordkaito/beeyoustream.git"
   },
   "bugs": {
-    "url": "https://github.com/lukemcdonald/beeYOU-react/issues"
+    "url": "https://github.com/lordkaito/beeyoustream/issues"
   },
   "scripts": {
     "build": "NODE_ENV=production run-s build:*",
