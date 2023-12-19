@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: 'src',
-  base: '/beeYOU-react/',
+  // base: '/beeyou/',
   build: {
     outDir: '../dist',
   },

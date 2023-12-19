@@ -42,7 +42,7 @@ export default function FaqsPage() {
           <summary className="-mx-4 cursor-pointer px-4 py-3">Can I contribute to beeYOU?</summary>
           <p>
             Yes, you can! beeYOU is an open source project, and you can contribute to it on{' '}
-            <a href="https://github.com/lukemcdonald/beeYOU-react">GitHub</a>.
+            <a href="https://github.com/lordkaito/beeyoustream">GitHub</a>.
           </p>
         </details>
       </Article>
