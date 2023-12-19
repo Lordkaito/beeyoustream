@@ -37,23 +37,23 @@ function NewsletterForm({
         </label>
         <input
           required
-          placeholder="Your best email&hellip;"
+          placeholder="your email here"
           id="email"
           name="email"
           type="email"
           value={email}
           onChange={handleChange}
           autoComplete="off"
-          className="w-full rounded-sm border border-gray-300 bg-white px-4 py-3 text-sm text-gray-500 shadow-none"
+          className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-[#625a57] placeholder:text-[#a9b1bc] shadow-none"
         />
         {success && (
-          <div className="mt-2 text-xs italic text-gray-500">Email submitted successfully!</div>
+          <div className="mt-2 text-xs italic text-[#b0cd6c]">email submitted successfully!</div>
         )}
       </div>
 
       <div className="control">
         <button
-          className="-mt-px inline-flex cursor-pointer justify-center whitespace-nowrap rounded-sm border-0 bg-gradient-to-r from-secondary-500 to-secondary-400 px-7 py-4 text-center font-medium leading-4 text-white no-underline shadow-lg"
+          className="-mt-px inline-flex cursor-pointer justify-center whitespace-nowrap rounded-full border-0 bg-gradient-to-r from-[#ff9f00] to-[#b25916] px-7 py-4 text-center leading-4 text-white no-underline shadow-lg font-semibold text-xl"
           type="submit"
         >
           {submitText}

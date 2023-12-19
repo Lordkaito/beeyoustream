@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Fira Sans', ...fontFamily.sans],
+        sans: ['Fredoka', ...fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {

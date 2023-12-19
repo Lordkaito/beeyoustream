@@ -1,17 +1,17 @@
 {
   "version": "4.0.0",
-  "name": "holly-react",
-  "description": "React version of Holly",
+  "name": "beeYOU-react",
+  "description": "React version of beeYOU",
   "author": "Luke McDonald (https://lukemcdonald.com/)",
-  "homepage": "https://lukemcdonald.github.io/holly-react",
+  "homepage": "https://lukemcdonald.github.io/beeYOU-react",
   "keywords": [],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lukemcdonald/holly-react.git"
+    "url": "https://github.com/lukemcdonald/beeYOU-react.git"
   },
   "bugs": {
-    "url": "https://github.com/lukemcdonald/holly-react/issues"
+    "url": "https://github.com/lukemcdonald/beeYOU-react/issues"
   },
   "scripts": {
     "build": "NODE_ENV=production run-s build:*",
