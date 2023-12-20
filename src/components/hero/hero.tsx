@@ -35,14 +35,6 @@ function Hero({
     return () => ScrollReveal().destroy()
   }, [])
 
-  function onNewsletterSubmit(values: any) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ values })
-      }, 1000)
-    })
-  }
-
   const addToScrollRevealRef = (el: ScrollRevealRefElement) => {
     scrollRevealRef.current.push(el)
   }
@@ -53,22 +45,27 @@ function Hero({
         <div className="hero-inner relative lg:flex">
           <div className="hero-copy pb-16 pt-10 lg:min-w-[40rem] lg:pr-20 lg:pt-16">
             <div className="mx-auto w-full max-w-3xl">
-              <h1 className="mb-4 mt-0 text-4xl font-bold md:text-5xl text-[#b25916]" ref={addToScrollRevealRef}>
-                <span className='text-[#ff9f00]'>bee</span>
+              <h1
+                className="mb-4 mt-0 text-4xl font-bold text-[#b25916] md:text-5xl"
+                ref={addToScrollRevealRef}
+              >
+                <span className="text-[#ff9f00]">bee</span>
                 <span>YOU</span>
               </h1>
               <p className="prose prose-xl m-auto text-[#625a57]" ref={addToScrollRevealRef}>
                 {content}
+                <br />
+                <span className="prose prose-xl m-auto text-[#625a57]">
+                  Sign up to be informed of the launch!
+                </span>
               </p>
               <br />
-              <p className='prose prose-xl m-auto text-[#625a57]'>Sign up to be informed of the launch!</p>
             </div>
 
             <div ref={addToScrollRevealRef}>
               <NewsletterForm
                 className="mx-auto mt-8 max-w-md lg:mx-0"
                 submitText="Join"
-                onSubmit={onNewsletterSubmit}
               />
             </div>
           </div>

@@ -4,11 +4,9 @@ import { useState } from 'react'
 
 function NewsletterForm({
   className,
-  onSubmit,
   submitText = 'Submit',
 }: {
   className?: string
-  onSubmit: (email: string) => Promise<any>
   submitText?: string
 }) {
   const [email, setEmail] = useState('')
@@ -16,10 +14,17 @@ function NewsletterForm({
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const result = await onSubmit(email)
-    console.log(result)
+    fetch("http://localhost:3000/api/controllers/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    }).then((res) => {
+      console.log(res.ok)
+      setSuccess(res.ok)
+    });
     setEmail('')
-    setSuccess(true)
   }
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
@@ -44,16 +49,19 @@ function NewsletterForm({
           value={email}
           onChange={handleChange}
           autoComplete="off"
-          className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-[#625a57] placeholder:text-[#a9b1bc] shadow-none"
+          className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-[#625a57] shadow-none placeholder:text-[#a9b1bc]"
         />
         {success && (
           <div className="mt-2 text-xs italic text-[#b0cd6c]">email submitted successfully!</div>
+        )}
+        {!success && (
+          <div className="mt-2 text-xs italic text-[#b25916]">email failed to submit</div>
         )}
       </div>
 
       <div className="control">
         <button
-          className="-mt-px inline-flex cursor-pointer justify-center whitespace-nowrap rounded-full border-0 bg-gradient-to-r from-[#ff9f00] to-[#b25916] px-7 py-4 text-center leading-4 text-white no-underline shadow-lg font-semibold text-xl"
+          className="-mt-px inline-flex cursor-pointer justify-center whitespace-nowrap rounded-full border-0 bg-gradient-to-r from-[#ff9f00] to-[#b25916] px-7 py-4 text-center text-xl font-semibold leading-4 text-white no-underline shadow-lg"
           type="submit"
         >
           {submitText}
