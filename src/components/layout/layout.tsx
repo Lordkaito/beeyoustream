@@ -4,6 +4,7 @@ import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Header } from '@/components/header'
 import { cn } from '@/utils/cn'
+import bg from '../../assets/fd.png'
 
 function Layout({
   children,
@@ -11,10 +12,11 @@ function Layout({
 }: PropsWithChildren<{
   className?: string
 }>) {
+  console.log(bg)
   return (
     <div
       className={cn(
-        'relative mx-auto bg-[url("../../assets/fd.png")] bg-auto bg-no-repeat bg-right-bottom my-0 flex min-h-screen flex-col overflow-hidden bg-white shadow-2xl',
+        `relative mx-auto bg-[url("${bg}")] bg-auto bg-no-repeat bg-right-bottom my-0 flex min-h-screen flex-col overflow-hidden bg-white shadow-2xl`,
         className,
       )}
     >
