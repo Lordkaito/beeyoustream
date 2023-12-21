@@ -16,17 +16,29 @@ function NewsletterForm({
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    fetch("https://express-beeyou.vercel.app/newsletter", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    }).then((res) => {
-      fetchAgain && fetchAgain()
-      setSuccess(res.ok)
-    });
-    setEmail('')
+
+    try {
+      const response = await fetch('https://express-beeyou.vercel.app/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      if (response.ok) {
+        fetchAgain && fetchAgain()
+        setSuccess(true)
+        setEmail('')
+      } else {
+        setSuccess(false)
+        // Manejar el error aquí si es necesario
+      }
+    } catch (error) {
+      // Manejar cualquier error de red u otros errores
+      console.error('Error:', error)
+      setSuccess(false)
+    }
   }
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
