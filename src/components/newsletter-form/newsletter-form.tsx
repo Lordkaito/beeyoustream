@@ -5,9 +5,11 @@ import { useState } from 'react'
 function NewsletterForm({
   className,
   submitText = 'Submit',
+  fetchAgain,
 }: {
   className?: string
   submitText?: string
+  fetchAgain?: () => void
 }) {
   const [email, setEmail] = useState('')
   const [success, setSuccess] = useState(false)
@@ -21,7 +23,7 @@ function NewsletterForm({
       },
       body: JSON.stringify({ email }),
     }).then((res) => {
-      console.log(res.ok)
+      fetchAgain && fetchAgain()
       setSuccess(res.ok)
     });
     setEmail('')

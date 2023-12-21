@@ -1,7 +1,7 @@
 import { NewsletterForm } from '@/components/newsletter-form'
 import { cn } from '@/utils/cn'
 import type { ReactNode } from 'react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ScrollReveal from 'scrollreveal'
 
 type ScrollRevealRefElement = HTMLDivElement | HTMLHeadingElement | HTMLParagraphElement
@@ -18,6 +18,7 @@ function Hero({
   title: string
 }) {
   const scrollRevealRef = useRef<ScrollRevealRefElement[]>([])
+  const [users, setUsers] = useState<number | null>(null)
 
   useEffect(() => {
     if (scrollRevealRef.current.length > 0) {
@@ -32,8 +33,18 @@ function Hero({
       )
     }
 
+    fetchUserCount()
+
     return () => ScrollReveal().destroy()
   }, [])
+
+  async function fetchUserCount() {
+    fetch('https://express-beeyou.vercel.app/users')
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data)
+      })
+  }
 
   const addToScrollRevealRef = (el: ScrollRevealRefElement) => {
     scrollRevealRef.current.push(el)
@@ -66,7 +77,14 @@ function Hero({
               <NewsletterForm
                 className="mx-auto mt-8 max-w-md lg:mx-0"
                 submitText="Join"
+                fetchAgain={fetchUserCount}
               />
+              <br />
+              {users && (
+                <div className="mt-2 text-xs italic text-[#b0cd6c]">
+                  {users} users have already signed up!
+                </div>
+              )}
             </div>
           </div>
 
