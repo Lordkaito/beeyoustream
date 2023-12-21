@@ -14,7 +14,7 @@ function Layout({
   return (
     <div
       className={cn(
-        `relative mx-auto my-0 flex min-h-screen flex-col overflow-hidden bg-white shadow-2xl bg-image-div`,
+        `relative mx-auto ml my-0 flex min-h-screen flex-col overflow-hidden bg-white shadow-2xl bg-image-div`,
         className,
       )}
     >
