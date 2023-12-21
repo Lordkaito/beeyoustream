@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import ScrollReveal from 'scrollreveal'
-import img from '../../assets/prueba.png'
+import img from '../../assets/heroimg.png'
 
 function Illustration({ className }: { className?: string }) {
   const scrollRevealOneRef = useRef<HTMLDivElement[]>([])
@@ -74,7 +74,7 @@ function Illustration({ className }: { className?: string }) {
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 30 30">
           <path
-            fill="#ff9f00"
+            fill="#b69bf0"
             d="M9.39 3a2.75 2.75 0 0 0-2.366 1.349l-4.885 8.25a2.75 2.75 0 0 0 0 2.802l4.885 8.25A2.75 2.75 0 0 0 9.39 25h9.22a2.75 2.75 0 0 0 2.366-1.348l4.887-8.25a2.75 2.75 0 0 0 0-2.804l-4.887-8.25A2.75 2.75 0 0 0 18.61 3zm-7.25 9.599l.645.382z"
           ></path>
         </svg>
@@ -105,7 +105,7 @@ function Illustration({ className }: { className?: string }) {
           </defs>
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 35 35">
             <path
-              fill="#ff9f00"
+              fill="#b69bf0"
               d="M9.39 3a2.75 2.75 0 0 0-2.366 1.349l-4.885 8.25a2.75 2.75 0 0 0 0 2.802l4.885 8.25A2.75 2.75 0 0 0 9.39 25h9.22a2.75 2.75 0 0 0 2.366-1.348l4.887-8.25a2.75 2.75 0 0 0 0-2.804l-4.887-8.25A2.75 2.75 0 0 0 18.61 3zm-7.25 9.599l.645.382z"
             ></path>
           </svg>
@@ -148,7 +148,7 @@ function Illustration({ className }: { className?: string }) {
           </defs>
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 28 28">
             <path
-              fill="#ff9f00"
+              fill="#b69bf0"
               d="M9.39 3a2.75 2.75 0 0 0-2.366 1.349l-4.885 8.25a2.75 2.75 0 0 0 0 2.802l4.885 8.25A2.75 2.75 0 0 0 9.39 25h9.22a2.75 2.75 0 0 0 2.366-1.348l4.887-8.25a2.75 2.75 0 0 0 0-2.804l-4.887-8.25A2.75 2.75 0 0 0 18.61 3zm-7.25 9.599l.645.382z"
             ></path>
           </svg>

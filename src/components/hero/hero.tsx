@@ -57,16 +57,16 @@ function Hero({
           <div className="hero-copy pb-16 pt-10 lg:min-w-[40rem] lg:pr-20 lg:pt-16">
             <div className="mx-auto w-full max-w-3xl">
               <h1
-                className="mb-4 mt-0 text-4xl font-bold text-[#b25916] md:text-5xl"
+                className="mb-4 mt-0 text-4xl font-bold text-[#282828] md:text-5xl"
                 ref={addToScrollRevealRef}
               >
-                <span className="text-[#ff9f00]">bee</span>
-                <span>YOU</span>
+                beeYOU
               </h1>
-              <p className="prose prose-xl m-auto text-[#625a57]" ref={addToScrollRevealRef}>
+              <p className="prose prose-xl m-auto text-[#7a7a7a]" ref={addToScrollRevealRef}>
                 {content}
                 <br />
-                <span className="prose prose-xl m-auto text-[#625a57]">
+                <br />
+                <span className="prose prose-xl m-auto text-[#7a7a7a]">
                   Sign up to be informed of the launch!
                 </span>
               </p>
@@ -81,8 +81,8 @@ function Hero({
               />
               <br />
               {users && (
-                <div className="mt-2 text-xs italic text-[#b0cd6c]">
-                  {users} users have already signed up!
+                <div className="mt-2 text-[#b69bf0] prose-xl">
+                  <span className="font-semibold">{users}</span> already interested bees!
                 </div>
               )}
             </div>

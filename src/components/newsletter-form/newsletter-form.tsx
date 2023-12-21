@@ -63,7 +63,7 @@ function NewsletterForm({
           value={email}
           onChange={handleChange}
           autoComplete="off"
-          className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-[#625a57] shadow-none placeholder:text-[#a9b1bc]"
+          className="w-full rounded-full border-gray-300 bg-white px-4 py-3 text-lg text-[#b69bf0] shadow-none placeholder:text-[#b69bf0] border-2 focus:border-2 focus:border-[#eecafd] focus:ring-[#eecafd]"
         />
         {success && (
           <div className="mt-2 text-xs italic text-[#b0cd6c]">email submitted successfully!</div>
@@ -75,7 +75,7 @@ function NewsletterForm({
 
       <div className="control">
         <button
-          className="-mt-px inline-flex cursor-pointer justify-center whitespace-nowrap rounded-full border-0 bg-gradient-to-r from-[#ff9f00] to-[#b25916] px-7 py-4 text-center text-xl font-semibold leading-4 text-white no-underline shadow-lg"
+          className="-mt-px inline-flex cursor-pointer justify-center whitespace-nowrap rounded-full border-0 bg-gradient-to-r from-[#eecafd] to-[#b69bf0] px-7 py-5 text-center text-xl font-semibold leading-4 text-white no-underline shadow-lg"
           type="submit"
         >
           {submitText}
