@@ -14,7 +14,7 @@ function NewsletterForm({
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    fetch("http://localhost:3000/api/controllers/user", {
+    fetch("https://express-beeyou.vercel.app/newsletter", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,9 +54,9 @@ function NewsletterForm({
         {success && (
           <div className="mt-2 text-xs italic text-[#b0cd6c]">email submitted successfully!</div>
         )}
-        {!success && (
+        {/* {!success && (
           <div className="mt-2 text-xs italic text-[#b25916]">email failed to submit</div>
-        )}
+        )} */}
       </div>
 
       <div className="control">
