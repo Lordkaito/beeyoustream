@@ -1403,20 +1403,20 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\$\{bg\}\)\] {
-  background-image: url(${bg});
+.bg-\[b-image\] {
+  background-color: b-image;
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
-.bg-\[url\(\$\{bg\.toString\}\)\] {
-  background-image: url(${bg.toString});
+.bg-b-image {
+  background-image: url('./src/assets/bgimage.png');
 }
-.bg-\[url\(\"\/assets\/fd\.png\"\)\] {
-  background-image: url("/assets/fd.png");
+.bg-\[url\(\"\.\.\/\.\.\/assets\/bgimage\.png\"\)\] {
+  background-image: url("../../assets/bgimage.png");
 }
-.bg-\[url\(\"\$\{bg\}\"\)\] {
-  background-image: url("${bg}");
+.bg-\[url\(\"\.\.\/\.\.\/assets\/bgimage-c4455074\.png\"\)\] {
+  background-image: url("../../assets/bgimage-c4455074.png");
 }
 .from-\[\#eecafd\] {
   --tw-gradient-from: #eecafd var(--tw-gradient-from-position);
@@ -1575,6 +1575,10 @@ select {
 .drop-shadow-2xl {
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.bg-image-div {
+  background-image: url('../src/assets/bgimage.png');
+  background-color: red !important;
 }
 @media (min-width: 1024px) {
   .lg\:prose-xl {
