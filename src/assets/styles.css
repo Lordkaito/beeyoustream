@@ -1403,9 +1403,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-b-image {
-  background-image: url('./src/assets/bgimage.png');
-}
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1421,15 +1418,6 @@ select {
 }
 .to-\[\#b69bf0\] {
   --tw-gradient-to: #b69bf0 var(--tw-gradient-to-position);
-}
-.bg-auto {
-  background-size: auto;
-}
-.bg-right-bottom {
-  background-position: right bottom;
-}
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1568,8 +1556,10 @@ select {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .bg-image-div {
-  background-image: url('../src/assets/bgimage.png');
-  background-color: red !important;
+  background-image: url("/assets/myimg.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom right;
 }
 @media (min-width: 1024px) {
   .lg\:prose-xl {

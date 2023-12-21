@@ -5,9 +5,6 @@ module.exports = {
   content: ['./src/**/*.{html,ts,tsx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'b-image': "url('./src/assets/bgimage.png')",
-      },
       fontFamily: {
         sans: ['Fredoka', ...fontFamily.sans],
       },
