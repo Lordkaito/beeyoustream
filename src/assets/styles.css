@@ -1403,20 +1403,11 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[b-image\] {
-  background-color: b-image;
-}
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
 .bg-b-image {
   background-image: url('./src/assets/bgimage.png');
 }
-.bg-\[url\(\"\.\.\/\.\.\/assets\/bgimage\.png\"\)\] {
-  background-image: url("../../assets/bgimage.png");
-}
-.bg-\[url\(\"\.\.\/\.\.\/assets\/bgimage-c4455074\.png\"\)\] {
-  background-image: url("../../assets/bgimage-c4455074.png");
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 .from-\[\#eecafd\] {
   --tw-gradient-from: #eecafd var(--tw-gradient-from-position);

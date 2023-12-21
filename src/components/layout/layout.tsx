@@ -14,7 +14,7 @@ function Layout({
   return (
     <div
       className={cn(
-        `relative mx-auto bg-[url("../../assets/bgimage-c4455074.png")] bg-auto bg-no-repeat bg-right-bottom my-0 flex min-h-screen flex-col overflow-hidden bg-white shadow-2xl`,
+        `relative mx-auto bg-b-image bg-auto bg-no-repeat bg-right-bottom my-0 flex min-h-screen flex-col overflow-hidden bg-white shadow-2xl`,
         className,
       )}
     >
