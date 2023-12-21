@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Header } from '@/components/header'
 import { cn } from '@/utils/cn'
-import bg from '../../assets/fd.png'
+import bg from '../../assets/bgimage.png'
 
 function Layout({
   children,
