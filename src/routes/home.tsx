@@ -6,7 +6,7 @@ export default function HomePage() {
     <Layout>
       <Hero
         title="beeYOU"
-        content="Everything you need to have your widgets in one place. Access to widgets for your stream, free from ties to external platforms."
+        content="Access to widgets for your stream, free from ties to external platforms."
         illustration={<HeroIllustration />}
       />
     </Layout>

@@ -53,7 +53,7 @@ function Hero({
   return (
     <section className={cn('text-center lg:w-full lg:py-20 lg:text-left', className)}>
       <div className="hero mx-auto w-full max-w-6xl px-6">
-        <div className="hero-inner relative lg:flex-row flex flex-col items-center justify-center">
+        <div className="hero-inner relative flex flex-col items-center justify-center lg:flex-row">
           <div className="hero-copy pb-16 pt-10 lg:min-w-[40rem] lg:pr-20 lg:pt-16">
             <div className="mx-auto w-full max-w-3xl">
               <h1
@@ -63,6 +63,13 @@ function Hero({
                 beeYOU
               </h1>
               <p className="prose prose-xl m-auto text-[#7a7a7a]" ref={addToScrollRevealRef}>
+                <span>
+                  <span className="font-semibold">Buy</span>,&nbsp;
+                  <span className="font-semibold">edit</span>,&nbsp;
+                  <span className="font-semibold">download</span>, and
+                  <span className="font-semibold"> install </span>
+                  your widgets from one place.&nbsp;
+                </span>
                 {content}
                 <br />
                 <br />
@@ -75,13 +82,13 @@ function Hero({
 
             <div ref={addToScrollRevealRef}>
               <NewsletterForm
-                className="mx-auto mt-8 max-w-md lg:mx-0"
+                className="mx-auto mt-5 max-w-md lg:mx-0"
                 submitText="Join"
                 fetchAgain={fetchUserCount}
               />
               <br />
               {users && (
-                <div className="mt-2 text-[#b69bf0] prose-xl">
+                <div className="prose-xl mt-2 text-[#b69bf0]">
                   <span className="font-semibold">{users}</span> already interested bees!
                 </div>
               )}

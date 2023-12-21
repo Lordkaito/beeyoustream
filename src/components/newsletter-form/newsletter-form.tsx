@@ -72,12 +72,12 @@ function NewsletterForm({
           className="w-full rounded-full border-2 border-gray-300 bg-white px-4 py-3 text-lg text-[#b69bf0] shadow-none placeholder:text-[#b69bf0] focus:border-2 focus:border-[#eecafd] focus:ring-[#eecafd]"
         />
         {success && (
-          <div className="mt-2 text-xs italic text-[#b69bf0] flex items-center justify-center gap-2">
+          <div className="mt-2 flex items-center justify-center gap-2 text-xs italic text-[#b69bf0]">
             <FaCheck /> email submitted successfully!
           </div>
         )}
         {error && (
-          <div className="mt-2 text-xs italic text-[#b69bf0] flex items-center justify-center gap-2">
+          <div className="mt-2 flex items-center justify-center gap-2 text-xs italic text-[#b69bf0]">
             <ImCross size={10} /> something went wrong!
           </div>
         )}
