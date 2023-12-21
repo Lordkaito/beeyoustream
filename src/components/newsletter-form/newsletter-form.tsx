@@ -1,6 +1,8 @@
 import { cn } from '@/utils/cn'
 import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
+import { FaCheck } from 'react-icons/fa'
+import { ImCross } from 'react-icons/im'
 
 function NewsletterForm({
   className,
@@ -13,6 +15,7 @@ function NewsletterForm({
 }) {
   const [email, setEmail] = useState('')
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -29,15 +32,18 @@ function NewsletterForm({
       if (response.ok) {
         fetchAgain && fetchAgain()
         setSuccess(true)
+        setError(false)
         setEmail('')
       } else {
         setSuccess(false)
+        setError(true)
         // Manejar el error aquí si es necesario
       }
     } catch (error) {
       // Manejar cualquier error de red u otros errores
       console.error('Error:', error)
       setSuccess(false)
+      setError(true)
     }
   }
 
@@ -63,14 +69,18 @@ function NewsletterForm({
           value={email}
           onChange={handleChange}
           autoComplete="off"
-          className="w-full rounded-full border-gray-300 bg-white px-4 py-3 text-lg text-[#b69bf0] shadow-none placeholder:text-[#b69bf0] border-2 focus:border-2 focus:border-[#eecafd] focus:ring-[#eecafd]"
+          className="w-full rounded-full border-2 border-gray-300 bg-white px-4 py-3 text-lg text-[#b69bf0] shadow-none placeholder:text-[#b69bf0] focus:border-2 focus:border-[#eecafd] focus:ring-[#eecafd]"
         />
         {success && (
-          <div className="mt-2 text-xs italic text-[#b0cd6c]">email submitted successfully!</div>
+          <div className="mt-2 text-xs italic text-[#b69bf0] flex items-center justify-center gap-2">
+            <FaCheck /> email submitted successfully!
+          </div>
         )}
-        {/* {!success && (
-          <div className="mt-2 text-xs italic text-[#b25916]">email failed to submit</div>
-        )} */}
+        {error && (
+          <div className="mt-2 text-xs italic text-[#b69bf0] flex items-center justify-center gap-2">
+            <ImCross size={10} /> something went wrong!
+          </div>
+        )}
       </div>
 
       <div className="control">

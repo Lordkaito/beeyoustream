@@ -53,7 +53,7 @@ function Hero({
   return (
     <section className={cn('text-center lg:w-full lg:py-20 lg:text-left', className)}>
       <div className="hero mx-auto w-full max-w-6xl px-6">
-        <div className="hero-inner relative lg:flex">
+        <div className="hero-inner relative lg:flex-row flex flex-col items-center justify-center">
           <div className="hero-copy pb-16 pt-10 lg:min-w-[40rem] lg:pr-20 lg:pt-16">
             <div className="mx-auto w-full max-w-3xl">
               <h1
@@ -89,7 +89,7 @@ function Hero({
           </div>
 
           {!!illustration && (
-            <div className="relative -mx-6 py-10 lg:mx-0 lg:p-0">{illustration}</div>
+            <div className="relative mx-6 py-10 lg:mx-0 lg:p-0">{illustration}</div>
           )}
         </div>
       </div>
