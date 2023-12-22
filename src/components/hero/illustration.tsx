@@ -48,9 +48,9 @@ function Illustration({ className }: { className?: string }) {
     <div className={className}>
       <div
         ref={addToScrollRevealTwoRef}
-        className="hero-illustration-browser drop-shadow-2xl w-[300px] max-w-none md:w-[700px] lg:w-[700px]"
+        className="hero-illustration-browser drop-shadow-2xl w-[300px] max-w-none md:w-auto"
       >
-        <img src={img} alt="" className="w-[300px] md:w-[700px] lg:w-[700px]" />
+        <img src={img} alt="" className="w-[300px] md:w-auto" />
       </div>
     </div>
   )
