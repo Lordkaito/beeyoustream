@@ -40,7 +40,7 @@ function Hero({
   }, [])
 
   async function fetchUserCount() {
-    fetch('https://express-beeyou.vercel.app/users')
+    fetch('https://newsletter-server.vercel.app/users')
       .then((res) => res.json())
       .then((data) => {
         setUsers(data)
