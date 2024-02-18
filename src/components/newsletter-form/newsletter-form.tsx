@@ -21,7 +21,7 @@ function NewsletterForm({
     event.preventDefault()
 
     try {
-      const response = await fetch('https://express-beeyou.vercel.app/newsletter', {
+      const response = await fetch('https://newsletter-server.vercel.app/newsletter', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
